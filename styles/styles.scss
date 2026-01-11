@@ -1,0 +1,974 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "HurmeGeometricSans3";
+  src: local("HurmeGeometricSans3"),
+    url("../fonts/HurmeGeometricSans3-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HurmeGeometricSans3";
+  src: local("HurmeGeometricSans3"),
+    url("../fonts/HurmeGeometricSans3-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HurmeGeometricSans3";
+  src: local("HurmeGeometricSans3"),
+    url("../fonts/HurmeGeometricSans3-Black.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "HurmeGeometricSans3";
+  src: local("HurmeGeometricSans3"),
+    url("../fonts/HurmeGeometricSans3-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+// set up variables
+$font-regular: "HurmeGeometricSans3", sans-serif;
+
+$fs-base: 20px;
+$fs-header: 32px;
+
+$px-S: 8px;
+$px-M: 16px;
+$px-L: 24px;
+$px-XL: 32px;
+$px-XXL: 48px;
+$px-XXXL: 64px;
+
+$color-main: #eeeae5;
+$color-bg: #13294b;
+$color-light-bg: #7FBFF5;
+$color-accent: #005bab;
+
+$media-breakpoint-sm: 576px;
+$media-breakpoint-md: 768px;
+$media-breakpoint-lg: 992px;
+$media-breakpoint-xl: 1200px;
+
+#es-rc #es-rc-content {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: $fs-base;
+  line-height: 1.2;
+  color: $color-main;
+  background-color: $color-bg;
+  max-width: 1000px;
+  margin: auto;
+  container: es-rc-content / inline-size;
+  overflow: hidden;
+
+  ::-moz-selection {
+    background-color: $color-main;
+    color: $color-bg;
+  }
+
+  ::selection {
+    background-color: $color-main;
+    color: $color-bg;
+  }
+
+  // minimal css reset
+
+  * {
+    box-sizing: border-box;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    display: block;
+  }
+
+  .es-desktop {
+    display: flex;
+    position: relative;
+  }
+
+  .es-kv {
+    display: flex;
+    display: none;
+
+    &>* {
+      flex: 1;
+    }
+
+    &__kinds {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24.5px;
+
+      &-item {
+        &-image {
+          height: 91px;
+          width: 91px;
+        }
+
+        &-text {
+          margin-top: 16px;
+          display: inline-block;
+          width: 100%;
+
+          text-align: center;
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .es-gas-and-mix {
+    &__section-1 {
+      display: flex;
+      position: relative;
+      right: -35px;
+
+      &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-title {
+          font-size: 54px;
+          font-weight: 700;
+        }
+
+        &-text {
+          margin-top: 50px;
+          font-size: 36px;
+          font-weight: 700;
+          color: #7fbff5;
+        }
+      }
+    }
+
+    &__img {
+      height: 500px;
+    }
+
+    &__section-2 {
+      padding: 42px 48px 79px 48px;
+      text-align: center;
+      color: #13294b;
+      background: #fff;
+
+      &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-text {
+          font-size: 20px;
+        }
+
+        &-title {
+          margin: 35px 0;
+          font-size: 23px;
+          font-weight: 700;
+        }
+
+        &-subtitle {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .es-assets-mix {
+    background-color: $color-main;
+
+    &__content {
+      padding-top: 78px;
+      padding-bottom: 78px;
+      display: flex;
+      color: $color-bg;
+
+      &-image {
+        // margin-top: -125px;
+        margin-left: -115px;
+      }
+
+      &-description {
+        padding-right: 30px;
+        padding-left: 17px;
+        font-size: 18px;
+
+        &-title {
+          font-size: 36px;
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+
+        &-text-1 {
+          font-weight: 400;
+        }
+
+        &-text-2 {
+          padding-left: 22px;
+          font-weight: 700;
+        }
+
+        &-text-3 {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .es-assets-mix-func-and-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__section-1 {
+      display: flex;
+      gap: 30px;
+
+      &-description {
+        padding-top: 67px;
+        padding-left: 40px;
+
+        &-title {
+          font-size: 36px;
+          font-weight: 700;
+        }
+
+        &-text {
+          margin-top: 28px;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+
+      &__mix-date-night-image {
+        margin-right: -160px;
+        margin-top: -70px;
+      }
+    }
+
+    &__section-2-mobile {
+      display: none;
+    }
+
+    &__section-2 {
+      position: relative;
+
+      &-sodastream-image {
+        position: relative;
+        // bottom: -110px;
+
+        margin-top: 22px;
+        padding: 0 146px;
+      }
+
+      &-image-container-text-title {
+        width: 250px;
+        position: absolute;
+
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &-image-container-text-title:nth-child(1) {
+        top: 160px;
+        left: 70px;
+      }
+
+      &-image-container-text-title:nth-child(2) {
+        top: 365px;
+        left: 75px;
+      }
+
+      &-image-container-text-title:nth-child(3) {
+        top: 590px;
+        left: 70px;
+      }
+
+      &-image-container-text-title:nth-child(4) {
+        top: 260px;
+        left: 680px;
+      }
+
+      &-image-container-text-title:nth-child(5) {
+        top: 500px;
+        left: 670px;
+      }
+    }
+  }
+
+  // .es-assets-mix-func-and-style::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 100px;
+  //   background-color: $color-main;
+  //   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  // }
+
+  .es-assets-mix-gas-and-taste-2 {
+    display: flex;
+    gap: 6px;
+    background-color: $color-main;
+
+
+    &__image-container {
+      width: 100%;
+      // position: relati    position: relative;ve;
+      position: relative;
+
+      &-text-2 {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &-title-2 {
+          font-size: 70px;
+          // line-height: 70px;
+          font-weight: 700;
+
+          &--small {
+            font-size: 30px;
+            // position: absolute;
+            font-weight: 700;
+          }
+        }
+
+        &-subtitle {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .es-assets-mix-gas-and-taste {
+    display: flex;
+    gap: 6px;
+    background-color: $color-main;
+
+    &__image-container {
+      width: 100%;
+      position: relative;
+
+      &-text {
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        text-align: center;
+
+        &-title {
+          font-size: 70px;
+          line-height: 70px;
+          font-weight: 700;
+
+
+        }
+
+        &-subtitle {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .es-sodastream-mix {
+    color: $color-bg;
+    background-color: $color-main;
+    padding: 48px 42px 58px 42px;
+    font-size: 18px;
+    font-weight: 400;
+
+    &__title {
+      margin: 0;
+      color: $color-bg;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &__text-1 {
+      margin-top: 26px;
+    }
+
+    &__text-2 {
+      font-weight: 700;
+      padding-left: 19.69px;
+
+      &--regular {
+        font-weight: 400;
+      }
+    }
+
+    &__text-3 {}
+
+    &__text-4 {
+      font-weight: 700;
+      padding-left: 19.69px;
+
+      &--regular {
+        font-weight: 400;
+      }
+    }
+
+    &__video {
+      width: 100%;
+      height: 460px;
+      margin-top: 25px;
+    }
+  }
+
+  .es-worth-to-know {
+    padding: 82px 44px 40px 44px;
+
+    &__title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    &__text {
+      margin-top: 52px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .es-for-everyone {
+    background-color: $color-main;
+    color: $color-bg;
+    padding-bottom: 58px;
+
+    &__content {
+      display: flex;
+
+      &-left {
+        &-image {
+          width: 416px;
+          height: 516px;
+          margin-top: 30px;
+          margin-left: 0px;
+        }
+
+        &-functionalities {
+          margin-left: 35px;
+          margin-top: -70px;
+          display: flex;
+          align-items: center;
+          gap: 24.5px;
+
+          &-item {
+            &-image {
+              height: 99px;
+              width: 99px;
+            }
+
+            &-text {
+              margin-top: 16px;
+              display: inline-block;
+              width: 100%;
+
+              text-align: center;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      &-description {
+        padding: 64px 47px;
+
+        &-title {
+          font-size: 36px;
+          font-weight: 700;
+        }
+
+        &-text {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+
+  .es-open-sodastream-tastes {
+    display: flex;
+
+    &>* {
+      width: 100%;
+    }
+
+    &__item {
+      padding: 39px 25.5px 75px 25.5px;
+      text-align: center;
+      font-size: 18px;
+
+      &>img {
+        width: 148px;
+        margin-bottom: 32px;
+      }
+    }
+
+    &__item:nth-child(1) {
+      color: #fff;
+      background-color: #0a2042;
+    }
+
+    &__item:nth-child(2) {
+      color: $color-bg;
+      background-color: #f6c641
+    }
+
+    &__item:nth-child(3) {
+      color: #fff;
+      background-color: #e25d5f;
+    }
+  }
+
+  .es-footer {
+    &__section-1-sodastreams {
+      margin-top: 15px;
+      // margin-bottom: -22px;
+    }
+
+    &__section-2 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #005bab;
+
+      &-title {
+        text-align: center;
+        font-size: 27px;
+        font-weight: 700;
+        color: $color-main;
+      }
+
+      &-logo {
+        margin-top: 27px;
+        width: 183px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .es-assets-mix-gas-and-taste {
+      flex-direction: column;
+
+      &__image-container {
+        width: 100%;
+        position: relative;
+
+        &-text-title {
+          font-size: 70px;
+        }
+
+        &-text-subtitle {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .es-assets-mix-func-and-style__section-2-mobile {
+      display: block;
+
+      &-sodastream-image {
+        width: 200px;
+        position: relative;
+        bottom: -60px;
+      }
+
+      &-image-container {
+        display: flex;
+        flex-direction: column;
+
+        &-text-title {
+          margin-top: 14px;
+          font-size: 18px;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        &-text-image {
+          margin-top: 20px;
+          width: 100px;
+        }
+      }
+    }
+
+    .es-assets-mix-func-and-style__section-2 {
+      display: none;
+    }
+
+    .es-for-everyone__content-left-functionalities {
+      margin-top: 32px;
+      flex-direction: column;
+    }
+
+    .es-footer__section-2-title {
+      font-size: 14px;
+    }
+
+    .es-assets-mix-func-and-style__section-1-description {
+      padding: 42px 48px;
+    }
+
+    .es-sodastream-mix__title,
+    .es-assets-mix-func-and-style__section-1-description-title,
+    .es-assets-mix__content-description-title,
+    .es-worth-to-know__title,
+    .es-for-everyone__content-description-title,
+    .es-for-everyone__title {
+      font-size: 28px;
+    }
+
+    .es-assets-mix-func-and-style::after {
+      height: 50px;
+    }
+
+    .es-gas-and-mix__section-1-description {
+      &-title {
+        font-size: 22px;
+      }
+
+      &-subtitle {
+        font-size: 18px;
+      }
+    }
+
+    .es-open-sodastream-tastes {
+      flex-direction: column;
+    }
+
+    .es-assets-mix-gas-and-taste__image-container-text {
+      &-title {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      &-subtitle {
+        font-size: 24px;
+      }
+    }
+
+    .es-gas-and-mix__section-1 {
+      position: static;
+      flex-direction: column;
+
+      &-description {
+        &-title {
+          margin-top: 50px;
+          font-size: 28px;
+          text-align: center;
+        }
+
+        &-text {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+
+      img {
+        width: 100%;
+        padding: 0 30px;
+      }
+    }
+
+    .es-assets-mix__content {
+      align-items: center;
+      flex-direction: column;
+
+      &-image {
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 0 42px 0;
+      }
+    }
+
+    .es-assets-mix-func-and-style__section-1 {
+      padding-top: 78px;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &__mix-date-night-image {
+        width: 100%;
+        padding: 0 30px;
+        ;
+        margin: 0;
+      }
+    }
+
+    .es-for-everyone__content {
+      padding-top: 78px;
+      flex-direction: column;
+
+      &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+          height: inherit;
+          width: 100%;
+
+          padding: 0 30px;
+          ;
+          margin: unset;
+        }
+
+        &-functionalities {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 651px) and (max-width: 768px) {
+    .es-assets-mix-func-and-style__section-2-sodastream-image {
+      bottom: -58px;
+    }
+
+    .es-assets-mix-func-and-style::after {
+      height: 50px;
+    }
+
+    .es-assets-mix-func-and-style__section-2 {
+      width: 753px;
+      padding-bottom: 100px;
+
+      &-image-container-text-title:nth-child(1) {
+        top: 162px;
+        left: 65px;
+      }
+
+      &-image-container-text-title:nth-child(2) {
+        top: 328px;
+        left: 60px;
+      }
+
+      &-image-container-text-title:nth-child(3) {
+        top: 490px;
+        left: 60px;
+      }
+
+      &-image-container-text-title:nth-child(4) {
+        top: 240px;
+        left: 442px;
+      }
+
+      &-image-container-text-title:nth-child(5) {
+        top: 420px;
+        left: 445px;
+      }
+    }
+
+    .es-assets-mix-gas-and-taste__image-container-text {
+      &-title {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      &-subtitle {
+        font-size: 18px
+      }
+    }
+
+    .es-gas-and-mix__section-1 {
+      position: static;
+      flex-direction: column;
+
+      &-description {
+        &-title {
+          margin-top: 50px;
+          font-size: 36px;
+          text-align: center;
+        }
+
+        &-text {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+
+      img {
+        width: 500px;
+      }
+    }
+
+    .es-assets-mix__content {
+      align-items: center;
+      flex-direction: column;
+
+      &-image {
+        width: 500px;
+        margin: 0 0 42px 0;
+      }
+    }
+
+    .es-assets-mix-func-and-style__section-1 {
+      padding-top: 78px;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &__mix-date-night-image {
+        width: 500px;
+        margin: 0;
+      }
+    }
+
+    .es-for-everyone__content {
+      padding-top: 78px;
+      flex-direction: column;
+
+      &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+          height: 500px;
+          width: 500px;
+          margin: unset;
+        }
+
+        &-functionalities {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 998px) {
+    .es-assets-mix-func-and-style__section-2-sodastream-image {
+      bottom: -58px;
+    }
+
+    .es-assets-mix-func-and-style::after {
+      height: 50px;
+    }
+
+    .es-assets-mix-func-and-style__section-2 {
+      width: 753px;
+      padding-bottom: 100px;
+
+      &-image-container-text-title:nth-child(1) {
+        top: 162px;
+        left: 65px;
+      }
+
+      &-image-container-text-title:nth-child(2) {
+        top: 328px;
+        left: 60px;
+      }
+
+      &-image-container-text-title:nth-child(3) {
+        top: 490px;
+        left: 60px;
+      }
+
+      &-image-container-text-title:nth-child(4) {
+        top: 240px;
+        left: 442px;
+      }
+
+      &-image-container-text-title:nth-child(5) {
+        top: 420px;
+        left: 445px;
+      }
+    }
+
+    .es-gas-and-mix__section-1 {
+      position: static;
+      flex-direction: column;
+
+      &-description {
+        &-title {
+          margin-top: 50px;
+          font-size: 36px;
+          text-align: center;
+        }
+
+        &-text {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+
+      img {
+        width: 500px;
+      }
+    }
+
+    .es-assets-mix__content {
+      align-items: center;
+      flex-direction: column;
+
+      &-image {
+        width: 500px;
+        margin: 0 0 42px 0;
+      }
+    }
+
+    .es-assets-mix-func-and-style__section-1 {
+      padding-top: 78px;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &__mix-date-night-image {
+        width: 500px;
+        margin: 0;
+      }
+    }
+
+    .es-for-everyone__content {
+      padding-top: 78px;
+      flex-direction: column;
+
+      &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+          height: 500px;
+          width: 500px;
+          margin: unset;
+        }
+
+        &-functionalities {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}
