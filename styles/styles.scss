@@ -129,13 +129,22 @@ $media-breakpoint-xl: 1200px;
         }
       }
     }
+
+    &__logo {
+      max-width: 200px;
+      margin-left: 0;
+      margin-bottom: 50px;
+    }
   }
+
+
 
   .es-gas-and-mix {
     &__section-1 {
       display: flex;
       position: relative;
       right: -35px;
+      padding-bottom: 50px;
 
       &-description {
         display: flex;
@@ -157,7 +166,7 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__img {
-      height: 500px;
+      // height: 500px;
     }
 
     &__section-2 {
@@ -439,7 +448,7 @@ $media-breakpoint-xl: 1200px;
   }
 
   .es-worth-to-know {
-    padding: 82px 44px 40px 44px;
+    padding: 40px 44px 40px 44px;
 
     &__title {
       text-align: center;
@@ -464,9 +473,9 @@ $media-breakpoint-xl: 1200px;
       &-left {
         &-image {
           width: 416px;
-          height: 516px;
+          height: 416px;
           margin-top: 30px;
-          margin-left: 0px;
+          margin-left: -50px;
         }
 
         &-functionalities {
@@ -525,7 +534,7 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__item {
-      padding: 39px 25.5px 75px 25.5px;
+      padding: 39px 10px 35px 10px;
       text-align: center;
       font-size: 18px;
 
@@ -552,9 +561,19 @@ $media-breakpoint-xl: 1200px;
   }
 
   .es-footer {
+
+    &__section-1 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #005bab;
+    }
+
     &__section-1-sodastreams {
       margin-top: 15px;
       // margin-bottom: -22px;
+      padding-bottom: 20px;
+      width: 95%;
+
     }
 
     &__section-2 {
